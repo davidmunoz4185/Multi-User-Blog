@@ -1,32 +1,19 @@
----
-title: "Readme.Rmd"
-output: html_document
----
-
 ## Multi User Blog
 
+### Clone it!!!
+
+if you want to start as soon as possible you will need to download this project by executing the following commands:
+
+`git clone https://github.com/davidmunoz4185/Multi-User-Blog.git`
+
+and then you will have access all the code locally
+
+### Play with it
+
+Now you will want to see if the code works, so go to the directory and execute: 
+
+`dev_appserver.py multi-user-blog`
+
+and open a browser in localhost:8080
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

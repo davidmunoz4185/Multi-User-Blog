@@ -134,7 +134,7 @@ class PostPage(BlogHandler):
 
     def post(self, post_id):
         if not self.user:
-            self.redirect('/')
+            return self.redirect('/login')
 
         subject = self.request.get('subject')
         content = self.request.get('content')
@@ -245,14 +245,14 @@ class NewPost(BlogHandler):
         if self.user:
             self.render("newpost.html",  uid=uid)
         else:
-            self.redirect("/login")
+            return self.redirect("/login")
 
     def post(self):
         """
             Creates new post and redirect to new post page.
         """
         if not self.user:
-            self.redirect('/login')
+            return self.redirect('/login')
 
         subject = self.request.get('subject')
         content = self.request.get('content')
@@ -318,7 +318,6 @@ class Signup(BlogHandler):
 
 class Register(Signup):
     def done(self):
-        #make sure the user doesn't already exist
         u = User.by_name(self.username)
         if u:
             msg = 'That user already exists.'
